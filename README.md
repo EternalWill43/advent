@@ -7,3 +7,4 @@
 | Day 1 | <li>- [x] </li> | <li>- [x] </li> |
 | Day 2 |                 |                 |
 | Day 3 |                 |                 |
+| Day 4 | <li>- [x] </li> | <li>- [x] </li> |
