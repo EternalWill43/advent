@@ -8,23 +8,23 @@
 - [ ] Elixir
 - [ ] Python
 
-|        | Day 1 Part 1  | Day 1 Part 2  |
-|--------|---------------|---------------|
-| C++    | <li>- [x] </li> | <li>- [x] </li> |
-| Elixir | <li>- [x] </li> | <li>- [x] </li> |
+|        | Day 1 Part 1     | Day 1 Part 2     |
+|--------|------------------|------------------|
+| C++    |:heavy_check_mark:|:heavy_check_mark:|
+| Elixir |:heavy_check_mark:|:heavy_check_mark:|
 
-|        | Day 2 Part 1  | Day 2 Part 2  |
-|--------|---------------|---------------|
-| C++    | <li>- [x] </li> | <li>- [x] </li> |
-| Elixir | <li>- [x] </li> | <li>- [x] </li> |
+|        | Day 2 Part 1       | Day 2 Part 2       |
+|--------|--------------------|--------------------|
+| C++    | :heavy_check_mark: | :heavy_check_mark: |
+| Elixir | :heavy_check_mark: | :heavy_check_mark: |
 
 |        | Day 3 Part 1  | Day 3 Part 2  |
 |--------|---------------|---------------|
-| C++    | <li>- [ ] </li> | <li>- [ ] </li> |
-| Elixir | <li>- [ ] </li> | <li>- [ ] </li> |
+| C++    | :x:           | :x:           |
+| Elixir | :x:           | :x:           |
 
-|        | Day 4 Part 1  | Day 4 Part 2  |
-|--------|---------------|---------------|
-| C++    | <li>- [x] </li> | <li>- [x] </li> |
-| Elixir | <li>- [ ] </li> | <li>- [ ] </li> |
+|        | Day 4 Part 1       | Day 4 Part 2       |
+|--------|--------------------|--------------------|
+| C++    | :heavy_check_mark: | :heavy_check_mark: |
+| Elixir | :x:                | :x:                |
 
