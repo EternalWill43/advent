@@ -6,7 +6,7 @@ using namespace std;
 int main() {
     char x, z;
     int score{};
-    ifstream f("input.txt");
+    ifstream f("../input.txt");
     while (f >> x) {
         f >> z;
         if (z == 'X') {

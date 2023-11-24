@@ -4,7 +4,7 @@
 using namespace std;
 
 int main() {
-    ifstream f("input.txt");
+    ifstream f("../input.txt");
     char x, z;
     int score{};
     while (f >> x) {
