@@ -1,4 +1,4 @@
-## Solutions to 2022 AoC
+## Solutions to Advent of Code
 
 ### Attempt at solving all the problems with different languages
 
@@ -9,11 +9,14 @@
 - [ ] Python
 - [ ] Rust
 
+<details>
+    <summary>2022</summary>
+    
 |        | Day 1 Part 1       | Day 1 Part 2       |
 | ------ | ------------------ | ------------------ |
 | C++    | :heavy_check_mark: | :heavy_check_mark: |
 | Elixir | :heavy_check_mark: | :heavy_check_mark: |
-| Python | :x:                | :x:                |
+| Python | :heavy_check_mark: | :heavy_check_mark: |
 | Rust   | :x:                | :x:                |
 
 |        | Day 2 Part 1       | Day 2 Part 2       |
@@ -36,3 +39,5 @@
 | Elixir | :x:                | :x:                |
 | Python | :x:                | :x:                |
 | Rust   | :x:                | :x:                |
+
+</details>
