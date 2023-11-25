@@ -6,7 +6,7 @@
 using namespace std;
 
 int main() {
-    ifstream f("input.txt");
+    ifstream f("../input.txt");
     string s;
     int sum{};
     vector<int> elves;
