@@ -1,44 +1,63 @@
-import sys
-import re
-from collections import defaultdict
 with open("../input.txt", "r") as f:
-    contents = f.read()
+    contents = f.read().splitlines()
 
-lines = contents.splitlines()
+total = 0
+dic = {}
+curr = ""
+start = None
 
-G = [[c for c in line] for line in lines]
-R = len(G)
-C = len(G[0])
 
-p1 = 0
-nums = defaultdict(list)
-for r in range(len(G)):
-  gears = set() # positions of '*' characters next to the current number
-  n = 0
-  has_part = False
-  for c in range(len(G[r])+1):
-    if c<C and G[r][c].isdigit():
-      n = n*10+int(G[r][c])
-      for rr in [-1,0,1]:
-        for cc in [-1,0,1]:
-          if 0<=r+rr<R and 0<=c+cc<C:
-            ch = G[r+rr][c+cc]
-            if not ch.isdigit() and ch != '.':
-              has_part = True
-            if ch=='*':
-              gears.add((r+rr, c+cc))
-    elif n>0:
-      for gear in gears:
-        nums[gear].append(n)
-      if has_part:
-        p1 += n
-      n = 0
-      has_part = False
-      gears = set()
+def adjacent(r, start_col, end_col):
+    if r - 1 >= 0:
+        for c in range(start_col - 1, end_col + 1):
+            if c >= 0 and c < len(contents[r - 1]):
+                if contents[r-1][c] == "*":
+                    return (True, r-1, c)
 
-print(p1)
-p2 = 0
-for k,v in nums.items():
-  if len(v)==2:
-    p2 += v[0]*v[1]
-print(p2)
+    for c in range(start_col - 1, end_col + 1):
+        if c >= 0 and c < len(contents[r]):
+            if contents[r][c] == "*":
+                return (True, r, c)
+
+    if r + 1 < len(contents):
+        for c in range(start_col - 1, end_col + 1):
+            if c >= 0 and c < len(contents[r - 1]):
+                if contents[r+1][c] == "*":
+                    return (True, r+1, c)
+    return (False, False)
+
+
+for r, line in enumerate(contents):
+    for i, char in enumerate(line):
+        if char.isdigit():
+            curr += char
+            if start is None:
+                start = i
+        else:
+            if curr:
+                result = adjacent(r, start, i)
+                if result[0]:
+                    success, row, col = result
+                    if (row, col) in dic:
+                        dic[(row, col)].append(int(curr))
+                    else:
+                        dic[(row, col)] = [int(curr)]
+                start = None
+                curr = ""
+
+    if curr:
+        result = adjacent(r, start, i)
+        if result[0]:
+            success, row, col = result
+            if (row, col) in dic:
+                dic[(row, col)].append(int(curr))
+            else:
+                dic[(row, col)] = [int(curr)]
+            start = None
+            curr = ""
+
+for key in dic:
+    if len(dic[key]) == 2:
+        total += dic[key][0] * dic[key][1]
+
+print(total)
