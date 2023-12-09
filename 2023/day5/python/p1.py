@@ -5,12 +5,17 @@ original = lines[0].split(":")[1].split(" ")
 seeds = [int(x) for x in original if x != ""]
 lines.pop(0)
 
-seeds_soil = [[int(num) for num in x.split()] for x in lines[0].split("\n")[1:]]
+seeds_soil = [[int(num) for num in x.split()]
+              for x in lines[0].split("\n")[1:]]
 soil_fert = [[int(num) for num in x.split()] for x in lines[1].split("\n")[1:]]
-fert_water = [[int(num) for num in x.split()] for x in lines[2].split("\n")[1:]]
-water_light = [[int(num) for num in x.split()] for x in lines[3].split("\n")[1:]]
-light_temp = [[int(num) for num in x.split()] for x in lines[4].split("\n")[1:]]
-temp_humid = [[int(num) for num in x.split()] for x in lines[5].split("\n")[1:]]
+fert_water = [[int(num) for num in x.split()]
+              for x in lines[2].split("\n")[1:]]
+water_light = [[int(num) for num in x.split()]
+               for x in lines[3].split("\n")[1:]]
+light_temp = [[int(num) for num in x.split()]
+              for x in lines[4].split("\n")[1:]]
+temp_humid = [[int(num) for num in x.split()]
+              for x in lines[5].split("\n")[1:]]
 humid_loc = [[int(num) for num in x.split()] for x in lines[6].split("\n")[1:]]
 humid_loc.pop()
 
